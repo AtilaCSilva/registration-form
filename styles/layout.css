@@ -30,9 +30,9 @@ main {
 aside {
   background-color: var(--surface-secondary);
   padding: 4rem;
-  overflow: auto;
+  overflow: hidden;
 
-  & .aside-container {
+  &.aside-container {
     max-width: 31rem;
 
       & > img {
