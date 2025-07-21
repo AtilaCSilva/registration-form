@@ -20,7 +20,7 @@
 
   --stroke-default: #D6D3D1;
   --stroke-highlight: #f3541C;
-  --semantic: #DC2626;
+  --semantic-error: #DC2626;
 }
 
 body {
@@ -38,6 +38,7 @@ img {
   height: auto;
 }
 
+
 .flex {
   display: flex;
 }
@@ -49,3 +50,4 @@ img {
 .flex-2 {
   flex: 2;
 }
+
