@@ -1,60 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Estrelas do Amanhã</title>
-    <link rel="stylesheet" href="/styles/index.css" />
+
+    <link rel="stylesheet" href="styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div id="app">
       <main>
         <div class="main-container">
           <div class="back">
             <img
-              src="./assets/icons/arrow-left-02.svg"
-              alt="ícone de voltar"
+              src="assets/icons/arrow-left-02.svg"
+              alt="Ícone de voltar"
             />
             <span>Voltar</span>
           </div>
+
           <h1>Formulário de matrícula</h1>
           <p>
             Preencha os dados abaixo para matricular seu filho na escola de
             educação infantil Estrelas do Amanhã.
           </p>
 
-          <form action="" method="post" enctype="multipart/form-data">
+          <form method="post" enctype="multipart/form-data">
             <fieldset class="child-info">
               <legend>Informações da criança</legend>
+
               <div class="input-wrapper">
-                <label for="full-name">Nome completo</label>
+                <label for="fullname">Nome completo</label>
                 <input
-                  type="text"
-                  id="full-name"
+                  id="fullname"
                   name="fullname"
+                  type="text"
                   placeholder="Qual o nome da criança"
                 />
               </div>
 
               <div class="input-wrapper">
                 <label for="birth">Data de nascimento</label>
-                <input type="date" name="birth" id="birth" lang="pt-br" />
+                <input type="date" name="birth" id="birth" lang="pt-BR" />
               </div>
 
               <div class="select-wrapper">
                 <label for="gender">Sexo</label>
                 <select name="gender" id="gender">
                   <option value="female">Feminino</option>
-                  <option value="female">Masculino</option>
+                  <option value="male">Masculino</option>
                   <option value="na">Prefiro não responder</option>
                 </select>
               </div>
@@ -64,9 +68,9 @@
                 <textarea
                   name="medical-info"
                   id="medical-info"
-                  placeholder="A criança possui alguma condição médica que a escola deve saber? (Se sim, descreva abaixo)"
                   cols="30"
                   rows="5"
+                  placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique)"
                 ></textarea>
               </div>
 
@@ -74,7 +78,7 @@
                 <label for="birth-file">Certidão de Nascimento</label>
 
                 <div class="dropzone">
-                  <input type="file" name="birth-file" id="birth-file" />
+                  <input type="file" id="birth-file" name="birth-file" />
                   <svg
                     width="48"
                     height="48"
@@ -97,7 +101,6 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-
                   <p>
                     Clique aqui para
                     <br />
@@ -109,8 +112,9 @@
 
             <fieldset class="address">
               <legend>Endereço residencial</legend>
+
               <div class="input-wrapper">
-                <label for="">CEP</label>
+                <label for="cep">CEP</label>
                 <input type="text" id="cep" name="cep" />
               </div>
 
@@ -128,12 +132,7 @@
 
                 <div class="input-wrapper flex-1">
                   <label for="number">Número</label>
-                  <input
-                    type="number"
-                    id="number"
-                    name="number"
-                    placeholder="Número da residência"
-                  />
+                  <input type="number" id="number" name="number" />
                 </div>
               </div>
 
@@ -155,8 +154,8 @@
                     type="text"
                     id="state"
                     name="state"
-                    value="SP"
                     disabled
+                    value="SP"
                   />
                 </div>
               </div>
@@ -168,19 +167,29 @@
               <div class="input-wrapper">
                 <label for="gardian">Nome do responsável</label>
                 <input type="text" id="gardian" name="gardian" />
-                <small>Principal responsável legal e contato de emergência<small>
+                <small>
+                  Principal responsável legal e contato de emergência
+                </small>
               </div>
 
               <div class="input-wrapper">
                 <label for="phone">Telefone</label>
-                <input type="tel" name="phone" id="phone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" placeholder="(10) 9 8765-4321" />
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="(10) 9 8765-4321"
+                />
               </div>
 
               <div class="input-wrapper">
                 <label for="mail">Email</label>
                 <input type="email" name="mail" id="mail" required />
                 <div class="error">
-                  <img src="./assets/icons/alert-circle.svg" alt="ícone de alerta vermelho" />
+                  <img
+                    src="assets/icons/alert-circle.svg"
+                    alt="ícone de alerta vermelho"
+                  />
                   <span>Insira um e-mail válido</span>
                 </div>
               </div>
@@ -188,22 +197,37 @@
 
             <fieldset class="enroll-options">
               <legend>Opções de matrícula</legend>
-
               <div class="input-wrapper">
-                <label> Selecione</label>
+                <label>Selecione o turno de estudo</label>
 
                 <div class="radio-wrapper">
                   <div class="radio-inner">
                     <div class="radio-image"></div>
-                    <input type="radio" name="study-shift" id="morning" value="morning" />
-                    <img src="assets/icons/sun-cloud-02.svg" alt="ícone de sol com nuvem">
+                    <input
+                      type="radio"
+                      name="study-shift"
+                      value="morning"
+                      id="morning"
+                    />
+                    <img
+                      src="assets/icons/sun-cloud-02.svg"
+                      alt="ícone de sol com nuvem"
+                    />
                     <label for="morning">Manhã</label>
                   </div>
 
                   <div class="radio-inner">
                     <div class="radio-image"></div>
-                    <input type="radio" name="study-shift" id="evening" value="evening" />
-                    <img src="assets/icons/sun-02.svg" alt="ícone do sol">
+                    <input
+                      type="radio"
+                      name="study-shift"
+                      value="evening"
+                      id="evening"
+                    />
+                    <img
+                      src="assets/icons/sun-02.svg"
+                      alt="ícone de sol"
+                    />
                     <label for="evening">Tarde</label>
                   </div>
                 </div>
@@ -212,24 +236,27 @@
           </form>
         </div>
       </main>
-      <aside class="aside-container">
-        <header>
-          <img src="assets/logo.svg" alt="Logo Estrelas do Amanhã" />
-          <h2>
-            Porque cada momento de
-            <span>aprendizado</span>
-            conta
-          </h2>
-          <p>
-            Inscreva seu filho em nossa escola e veja-o florescer em um
-            ambiente acolhedor, seguro e estimulante.
-          </p>
-        </header>
 
-        <img
-          src="./assets/Illustration.svg"
-          alt="Ilustração de uma professora com crianças prestando atenção"
-        />
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="assets/logo.svg" alt="Logo Estrelas do Amanhã" />
+            <h2>
+              Porque cada momento de
+              <span>aprendizado</span>
+              conta
+            </h2>
+            <p>
+              Inscreva seu filho em nossa escola e veja-o florescer em um
+              ambiente acolhedor, seguro e estimulante.
+            </p>
+          </header>
+
+          <img
+            src="assets/Illustration.svg"
+            alt="Ilustração de um professora com crianças prestando atenção"
+          />
+        </div>
       </aside>
     </div>
   </body>
